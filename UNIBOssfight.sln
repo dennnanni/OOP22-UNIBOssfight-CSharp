@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.33214.272
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UNIBOssfight", "UNIBOssfight\UNIBOssfight.csproj", "{09D58A1F-1A0F-4045-8F33-3B2DB6F3B386}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sartini-Matteo", "Sartini-Matteo\Sartini-Matteo.csproj", "{7C3F63BB-E8F3-47A5-B953-089FD3B911A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{09D58A1F-1A0F-4045-8F33-3B2DB6F3B386}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09D58A1F-1A0F-4045-8F33-3B2DB6F3B386}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09D58A1F-1A0F-4045-8F33-3B2DB6F3B386}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C3F63BB-E8F3-47A5-B953-089FD3B911A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C3F63BB-E8F3-47A5-B953-089FD3B911A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C3F63BB-E8F3-47A5-B953-089FD3B911A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C3F63BB-E8F3-47A5-B953-089FD3B911A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
