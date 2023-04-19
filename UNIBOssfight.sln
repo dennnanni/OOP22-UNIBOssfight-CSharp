@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UNIBOssfight", "UNIBOssfigh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sartini-Matteo", "Sartini-Matteo\Sartini-Matteo.csproj", "{7C3F63BB-E8F3-47A5-B953-089FD3B911A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nanni-Denise", "Nanni-Denise\Nanni-Denise.csproj", "{58D8E1AE-011E-47C3-9716-FE7EB7133BBD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7C3F63BB-E8F3-47A5-B953-089FD3B911A0} = {7C3F63BB-E8F3-47A5-B953-089FD3B911A0}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +26,10 @@ Global
 		{7C3F63BB-E8F3-47A5-B953-089FD3B911A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C3F63BB-E8F3-47A5-B953-089FD3B911A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C3F63BB-E8F3-47A5-B953-089FD3B911A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58D8E1AE-011E-47C3-9716-FE7EB7133BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58D8E1AE-011E-47C3-9716-FE7EB7133BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58D8E1AE-011E-47C3-9716-FE7EB7133BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58D8E1AE-011E-47C3-9716-FE7EB7133BBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
