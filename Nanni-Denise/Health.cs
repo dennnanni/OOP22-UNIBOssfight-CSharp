@@ -11,7 +11,7 @@ namespace Nanni_Denise
     /// </summary>
     public class Health : IHealth
     {
-        private const int DEFAULT_HP = 100;
+        private const int DefaultHp = 100;
 
         /// <summary>
         /// Property to get and set the health value.
@@ -26,7 +26,7 @@ namespace Nanni_Denise
         /// <summary>
         /// Creates a new instance of the class Health.
         /// </summary>
-        public Health() : this(DEFAULT_HP) { }
+        public Health() : this(DefaultHp) { }
 
         /// <summary>
         /// Creates a new instance of the class Health given a initial healh value.
