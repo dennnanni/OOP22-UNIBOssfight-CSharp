@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nanni-Denise", "Nanni-Denis
 		{7C3F63BB-E8F3-47A5-B953-089FD3B911A0} = {7C3F63BB-E8F3-47A5-B953-089FD3B911A0}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cardaccia-Livia", "Cardaccia-Livia\Cardaccia-Livia.csproj", "{1387AB66-F86A-4D39-9850-E4D716DF3152}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{58D8E1AE-011E-47C3-9716-FE7EB7133BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58D8E1AE-011E-47C3-9716-FE7EB7133BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58D8E1AE-011E-47C3-9716-FE7EB7133BBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1387AB66-F86A-4D39-9850-E4D716DF3152}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1387AB66-F86A-4D39-9850-E4D716DF3152}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1387AB66-F86A-4D39-9850-E4D716DF3152}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1387AB66-F86A-4D39-9850-E4D716DF3152}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
