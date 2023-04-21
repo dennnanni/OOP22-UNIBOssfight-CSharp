@@ -15,7 +15,7 @@ namespace Cardaccia_Livia
         /// level, false otherwise.
         /// </summary>
         /// <returns>true is the entity is under the ground level</returns>
-        Boolean IsUnderGroundLevel();
+        bool IsUnderGroundLevel();
 
         /// <summary>
         /// Takes the entity back on the ground level if it is under it.
