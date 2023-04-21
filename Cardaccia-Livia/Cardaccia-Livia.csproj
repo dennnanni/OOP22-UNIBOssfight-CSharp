@@ -39,9 +39,15 @@
     <Compile Include="Behaviour.cs" />
     <Compile Include="IBehaviour.cs" />
     <Compile Include="BehaviourBuilder.cs" />
+    <Compile Include="IEntity.cs" />
+    <Compile Include="IHitbox.cs" />
+    <Compile Include="ITransform.cs" />
     <Compile Include="Platform.cs" />
     <Compile Include="Wall.cs" />
     <Compile Include="IBehaviourBuilder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Drawing" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
