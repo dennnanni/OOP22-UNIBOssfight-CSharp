@@ -38,6 +38,10 @@
   <ItemGroup>
     <Compile Include="Acceleration.cs" />
     <Compile Include="Angle.cs" />
+    <Compile Include="Bullet.cs" />
+    <Compile Include="IWeapon.cs" />
+    <Compile Include="Transform.cs" />
+    <Compile Include="Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Drawing" />
