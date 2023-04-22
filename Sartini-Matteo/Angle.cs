@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using System;
+﻿using System;
 using System.Drawing;
 
 namespace Sartini_Matteo
@@ -13,7 +12,7 @@ namespace Sartini_Matteo
         /// <summary>
         /// Right angle value.
         /// </summary>
-        public const int RIGHT_ANGLE = 90;
+        public const int RightAngle = 90;
 
         /// <summary>
         /// This method finds the angle in gradients between

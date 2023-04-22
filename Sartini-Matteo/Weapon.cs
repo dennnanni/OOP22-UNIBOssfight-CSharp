@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sartini_Matteo
 {
@@ -54,7 +48,7 @@ namespace Sartini_Matteo
         }
 
         /// <inheritdoc />
-        public double updateRotation(PointF target)
+        public double UpdateRotation(PointF target)
         {
             double angle = Angle.FindAngle(this.ShootingPosition.Position, target);
             this.Rotation = Angle.ToDegrees(angle);

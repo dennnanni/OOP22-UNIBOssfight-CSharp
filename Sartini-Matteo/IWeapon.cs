@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
-using System.Security.Cryptography;
-using System.Reflection;
 
 namespace Sartini_Matteo
 {
     /// <summary>
-    /// his class models the weapon component, which is used by an entity
+    /// This class models the weapon component, which is used by an entity
     /// to inflict damage towards other entities by firing bullets.
     /// </summary>
     public interface IWeapon
@@ -34,6 +28,6 @@ namespace Sartini_Matteo
         /// </summary>
         /// <param name="target">the target to point with the weapon</param>
         /// <returns>the new angle between the weapon and the target</returns>
-        double updateRotation(PointF target);
+        double UpdateRotation(PointF target);
     }
 }

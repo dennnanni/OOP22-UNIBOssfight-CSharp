@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
-using System.Runtime.ConstrainedExecution;
-using System.Runtime.CompilerServices;
-using System.Security.Policy;
 
 namespace Sartini_Matteo
 {
