@@ -15,11 +15,11 @@ namespace Cardaccia_Livia
         /// <summary>
         /// Creates a new instance of the class Wall.
         /// </summary>
-        public Wall(ITransform Position, int Height, int Width)
+        public Wall(ITransform position, int height, int width)
         {
-            _position = Position;
-            _height = Height;
-            _width = Width;
+            _position = position;
+            _height = height;
+            _width = width;
         }
 
         /// <summary>
