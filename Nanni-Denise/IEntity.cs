@@ -10,7 +10,12 @@ namespace Nanni_Denise
         /// <summary>
         /// Property to get and set the position.
         /// </summary>
-        Point Position { get; set; }
+        PointF Position { get; set; }
+
+        /// <summary>
+        /// Property to get the transform.
+        /// </summary>
+        ITransform Transform { get; }
 
         /// <summary>
         /// Property to get and set the hitbox.

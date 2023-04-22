@@ -10,7 +10,16 @@ namespace Nanni_Denise
         ///
         /// <inheritdoc/>
         /// 
-        public Point Position { get; set; }
+        public PointF Position
+        {
+            get => Transform.Position;
+            set => Transform.Position = value;
+        }
+
+        ///
+        /// <inheritdoc/> 
+        ///
+        public ITransform Transform { get; private set; }
 
         ///
         /// <inheritdoc/>
@@ -32,6 +41,16 @@ namespace Nanni_Denise
         /// 
         public int Damage { get; set; } = 0;
 
+        /// <summary>
+        /// Property to get and set movement speed on y-axis.
+        /// </summary>
+        public int YSpeed { get; set; }
+
+        /// <summary>
+        /// Property to get the max y-speed reachable from the entity.
+        /// </summary>
+        public int MaxYSpeed { get; private set; }
+
         ///
         /// <inheritdoc/>
         /// 
@@ -40,11 +59,10 @@ namespace Nanni_Denise
 
             Collider?.AddBehaviour("Wall.GetType().Name", e =>
             {
+                // The wall stops the entity
                 // Wall.Stop(this, e);
                 if (Hitbox.GetCollisionSideOnY(e.Position.Y) == 0)
-                {
-                    // Jump();
-                }
+                    Jump();
             });
 
             Collider?.AddBehaviour(typeof(Bullet).Name, e =>
@@ -55,6 +73,25 @@ namespace Nanni_Denise
                     b.Health.Destroy();
                 }
             });
+        }
+
+        /// <summary>
+        /// Checks if the entity is jumping.
+        /// </summary>
+        /// <returns>true if the y position of the entity is over ground level
+        /// false otherwise</returns>
+        protected bool IsJumping() => Position.Y > Transform.GroundLevel;
+
+        /// <summary>
+        /// Makes the entity jump.
+        /// </summary>
+        protected void Jump()
+        {
+            if (!IsJumping())
+            {
+                YSpeed = MaxYSpeed;
+                Transform.Move(0, 1);
+            }
         }
     }
 }
