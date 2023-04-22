@@ -43,8 +43,14 @@ namespace Nanni_Denise
         /// </summary>
         public int EarnedPoints
         {
-            get => _levelStats.Values.Select(x => x.Key * KillScore + x.Value)
-                .Sum(x => x);
+            get
+            {
+                if (_levelStats.Count > 0)
+                    _levelStats.Values.Select(x => x.Key * KillScore + x.Value)
+                    .Sum(x => x);
+
+                return 0;
+            }
         }
 
         /// <summary>
