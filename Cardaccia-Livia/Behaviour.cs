@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Cardaccia_Livia
 {
-    class Behaviour
+    public class Behaviour : IBehaviour
     {
+        public Action<IEntity, IEntity> JumpingBehaviour { get; set; }
+        public Action<IEntity, IEntity> BottomStoppingBehaviour { get; set; }
+        public Action<IEntity, IEntity> SideStoppingBehaviour { get; set; }
     }
 }
