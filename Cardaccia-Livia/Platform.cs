@@ -2,6 +2,10 @@
 
 namespace Cardaccia_Livia
 {
+    /// <summary>
+    /// This class models a platform, which is an obstacle
+    /// on which the player can jump and run.
+    /// </summary>
     public class Platform
     {
         private readonly ITransform _position;

@@ -36,24 +36,19 @@ namespace Cardaccia_Livia
             {
                 if (collidingEntity.Hitbox
                         .GetCollisionSideOnY(wall.Position.Y) < 0)
-                {
                     collidingEntity.Behaviour
                         .BottomStoppingBehaviour
                         .Invoke(collidingEntity, wall);
-                }
                 else
-                {
                     collidingEntity.Behaviour
                         .JumpingBehaviour
                         .Invoke(collidingEntity, wall);
-                }
+                
             }
             else
-            {
                 collidingEntity.Behaviour
                         .SideStoppingBehaviour
                         .Invoke(collidingEntity, wall);
-            }
         }
     }
 }
