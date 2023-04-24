@@ -20,13 +20,13 @@
             }
         }
 
-        public static double Width
+        public static float Width
         {
             get;
             set;
         }
 
-        public static double Height
+        public static float Height
         {
             get;
             set;

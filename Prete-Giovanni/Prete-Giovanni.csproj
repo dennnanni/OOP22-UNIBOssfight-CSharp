@@ -7,11 +7,12 @@
     <ProjectGuid>{F319B9EB-87C1-491C-A2B1-63AB79E3A148}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Prete_Giovanni</RootNamespace>
-    <AssemblyName>Prete_Giovanni</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AssemblyName>Prete-Giovanni</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,14 +34,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <Compile Include="ILevel.cs" />
+    <Compile Include="IRenderable.cs" />
+    <Compile Include="IRenderer.cs" />
+    <Compile Include="ITransform.cs" />
+    <Compile Include="Rectangle.cs" />
+    <Compile Include="Renderer.cs" />
+    <Compile Include="Transform.cs" />
+    <Compile Include="Window.cs" />
   </ItemGroup>
-	<ItemGroup>
-		<Compile Include="ITransform.cs" />
-	    <Compile Include="Transform.cs" />
-	</ItemGroup>
-	<ItemGroup>
-		<Reference Include="System.Drawing" />
-	</ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

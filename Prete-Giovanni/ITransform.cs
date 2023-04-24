@@ -1,20 +1,24 @@
 using System.Drawing;
 
-public interface ITransform
+namespace Prete_Giovanni
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="x"></param>
-    /// <param name="y"></param>
-    void move(float x, float y);
 
-    void moveOnGroundLevel();
+    public interface ITransform
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        void Move(float x, float y);
 
-    bool isUnderGroundLevel();
-    void resetGroundLevel();
+        void MoveOnGroundLevel();
 
-    void moveTo(float x, float y);
+        bool IsUnderGroundLevel();
+        void ResetGroundLevel();
 
-    ITransform copyOf();
+        void MoveTo(float x, float y);
+
+        ITransform CopyOf();
+    }
 }

@@ -9,7 +9,7 @@ namespace Prete_Giovanni
 
         public double Rotation { get; set; }
 
-        public double GroundLevel { set; get; }
+        public float GroundLevel { set; get; }
 
         public Transform(PointF position, double rotation)
         {
@@ -18,46 +18,35 @@ namespace Prete_Giovanni
             GroundLevel = Window.Height;
         }
 
-        public ITransform copyOf()
+        public ITransform CopyOf()
         {
             return new Transform(Position, Rotation);
         }
 
-        public double getGroundLevel()
+        public bool IsUnderGroundLevel()
         {
-            throw new System.NotImplementedException();
+            return Position.Y < GroundLevel;
         }
 
-        public Point getPosition()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public double getRotation()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public bool isUnderGroundLevel()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void move(float x, float y)
+        public void Move(float x, float y)
         {
             Position += new SizeF(x, y);
         }
 
-        public void moveOnGroundLevel()
+        public void MoveOnGroundLevel()
         {
+            if (this.IsUnderGroundLevel())
+            {
+                Position = new PointF(Position.X, GroundLevel);
+            }
         }
 
-        public void moveTo(float x, float y)
+        public void MoveTo(float x, float y)
         {
             Position = new PointF(x, y);
         }
 
-        public void resetGroundLevel()
+        public void ResetGroundLevel()
         {
             GroundLevel = 0;
         }
