@@ -5,6 +5,11 @@ namespace Prete_Giovanni
 
     public interface ITransform
     {
+
+        PointF Position { get; set; }
+
+        float GroundLevel { set; get; }
+
         /// <summary>
         /// 
         /// </summary>

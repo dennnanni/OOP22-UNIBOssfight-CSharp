@@ -25,7 +25,7 @@ namespace Prete_Giovanni
         {
         }
 
-        public IRenderable Render(PointF position, int xDirection, int yDirection, double rotation)
+        public IRenderable Render(PointF position, double rotation)
         {
             Rectangle rect = new Rectangle(
                     new PointF (

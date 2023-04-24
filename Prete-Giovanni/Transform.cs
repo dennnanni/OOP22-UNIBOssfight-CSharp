@@ -8,8 +8,7 @@ namespace Prete_Giovanni
         public PointF Position { get; set; }
 
         public double Rotation { get; set; }
-
-        public float GroundLevel { set; get; }
+        public float GroundLevel { get; set; }
 
         public Transform(PointF position, double rotation)
         {

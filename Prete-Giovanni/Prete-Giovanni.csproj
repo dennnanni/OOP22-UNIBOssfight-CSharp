@@ -34,10 +34,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ActiveEntity.cs" />
+    <Compile Include="Enemy.cs" />
+    <Compile Include="IEntity.cs" />
     <Compile Include="ILevel.cs" />
     <Compile Include="IRenderable.cs" />
     <Compile Include="IRenderer.cs" />
     <Compile Include="ITransform.cs" />
+    <Compile Include="Level.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Rectangle.cs" />
     <Compile Include="Renderer.cs" />
     <Compile Include="Transform.cs" />
@@ -48,6 +53,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nanni-Denise\Nanni-Denise.csproj">
+      <Project>{58d8e1ae-011e-47c3-9716-fe7eb7133bbd}</Project>
+      <Name>Nanni-Denise</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sartini-Matteo\Sartini-Matteo.csproj">
+      <Project>{7c3f63bb-e8f3-47a5-b953-089fd3b911a0}</Project>
+      <Name>Sartini-Matteo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
