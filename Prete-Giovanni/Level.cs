@@ -5,22 +5,51 @@ using System.Reflection;
 
 namespace Prete_Giovanni
 {
+    /// <summary>
+    /// This class models the concept of a Level.
+    /// </summary>
     internal class Level : ILevel
     {
+        /// <summary>
+        /// Standard player width anc height.
+        /// </summary>
         private const int PlayerWidth = 250;
+        /// <summary>
+        /// Standard end position.
+        /// </summary>
         private const int EndPosition = 10_000;
 
+        /// <summary>
+        /// List of entities.
+        /// </summary>
         private List<IEntity> _entities;
+
+        /// <summary>
+        /// End position
+        /// </summary>
         private int _endPosition;
+
+        /// <summary>
+        /// Number of defeated enemies
+        /// </summary>
         private int _defeatedEnemyCount;
 
+        ///
+        /// <inheritdoc/> 
+        ///
         public List<IEntity> Entities { 
             get => _entities; 
-            private set => _entities = value;
+            set => _entities = value;
         }
 
+        ///
+        /// <inheritdoc/> 
+        ///
         public Player Player { get; set; }
 
+        ///
+        /// <inheritdoc/> 
+        ///
         public int DefeatedEnemyCount
         {
             get => _defeatedEnemyCount;
@@ -38,27 +67,33 @@ namespace Prete_Giovanni
             );
         }
 
-        public void AddEntity(IEntity e)
-        {
-            this.Entities.Add(e);
-        }
+        ///
+        /// <inheritdoc/> 
+        ///
+        public void AddEntity(IEntity e) => this.Entities.Add(e);
 
+        ///
+        /// <inheritdoc/> 
+        ///
         public void Init()
         {
             Player.Init();
             _entities.ForEach(e => e.Init());
         }
 
-        public bool IsLevelEnded()
-        {
-            return Player.Transform.Position.X >= this._endPosition;
-        }
+        ///
+        /// <inheritdoc/> 
+        ///
+        public bool IsLevelEnded() => Player.Transform.Position.X >= this._endPosition;
 
-        public bool IsOver()
-        {
-            return Player.Health.IsDead();
-        }
+        ///
+        /// <inheritdoc/> 
+        ///
+        public bool IsOver() => Player.Health.IsDead();
 
+        ///
+        /// <inheritdoc/> 
+        ///
         public List<IRenderable> RenderEntities()
         {
             return _entities
@@ -67,35 +102,38 @@ namespace Prete_Giovanni
                 .ToList();
         }
 
-        public IRenderable RenderPlayer()
-        {
-            return Player.Render(Player.Transform.Position);
-        }
+        ///
+        /// <inheritdoc/> 
+        ///
+        public IRenderable RenderPlayer() => Player.Render(Player.Transform.Position);
 
-        public void RotatePlayerWeapon(PointF mousePosition)
-        {
-            this.Player.RotateWeapon(mousePosition);
-        }
+        ///
+        /// <inheritdoc/> 
+        ///
+        public void RotatePlayerWeapon(PointF mousePosition) => this.Player.RotateWeapon(mousePosition);
 
+        ///
+        /// <inheritdoc/> 
+        ///
         public void UpdateEntities()
         {
             _entities
-                .Where(e => e.GetType() is ActiveEntity)
+                .Where(e => e is ActiveEntity)
                 .Select(e => (ActiveEntity)e)
                 .Where(e => e.IsUpdated(Player.Transform.Position))
                 .ToList()
                 .ForEach(e => e.Update(Inputs.EMPTY));
 
             _defeatedEnemyCount += _entities
-                .Where(e => e.GetType() is Enemy)
+                .Where(e => e is Enemy)
                 .Count();
 
             _entities.RemoveAll(e => e.Health.IsDead());
         }
 
-        public void UpdatePlayer(Inputs input)
-        {
-            Player.Update(input);
-        }
+        ///
+        /// <inheritdoc/> 
+        ///
+        public void UpdatePlayer(Inputs input) => Player.Update(input);
     }
 }

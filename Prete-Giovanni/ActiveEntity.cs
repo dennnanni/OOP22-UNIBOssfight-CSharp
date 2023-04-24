@@ -4,6 +4,9 @@ using Sartini_Matteo;
 
 namespace Prete_Giovanni
 {
+    /// <summary>
+    /// This class models an Entity that can move and performs actions.
+    /// </summary>
     internal class ActiveEntity : IEntity
     {
         private int _height;
@@ -53,6 +56,11 @@ namespace Prete_Giovanni
             return Transform.Position.Y > Transform.GroundLevel;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="inputs"></param>
+        /// <exception cref="Exception"></exception>
         public void Update(Inputs inputs)
         {
             switch (inputs)
