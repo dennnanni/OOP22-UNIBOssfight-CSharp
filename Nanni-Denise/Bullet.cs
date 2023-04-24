@@ -9,8 +9,17 @@ namespace Nanni_Denise
     {
         ///
         /// <inheritdoc/>
+        ///
+        public PointF Position
+        {
+            get => Transform.Position;
+            set => Transform.Position = value;
+        }
+
         /// 
-        public Point Position { get; set; }
+        /// <inheritdoc/>
+        /// 
+        public ITransform Transform { get; private set; }
 
         ///
         /// <inheritdoc/>
@@ -31,7 +40,8 @@ namespace Nanni_Denise
         /// This method returns the Bullet property identifier.
         /// </summary>
         public bool IsPlayerBullet { get; private set; }
-        
+
+
         /// <summary>
         /// Creates a new instance of a bullet given its identifier.
         /// </summary>

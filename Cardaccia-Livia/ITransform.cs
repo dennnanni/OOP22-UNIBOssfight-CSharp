@@ -2,6 +2,10 @@
 
 namespace Cardaccia_Livia
 {
+    /// <summary>
+    /// This class models the component representing the concept
+    /// of the position and the rotation of an entity.
+    /// </summary>
     public interface ITransform
     {
         /// <summary>

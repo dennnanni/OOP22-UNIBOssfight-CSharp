@@ -2,6 +2,9 @@
 
 namespace Cardaccia_Livia
 {
+    /// <summary>
+    /// This class implements the Behaviour.
+    /// </summary>
     public class BehaviourBuilder : IBehaviourBuilder
     {
         private bool _built;
