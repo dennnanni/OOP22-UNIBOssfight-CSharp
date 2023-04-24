@@ -19,10 +19,7 @@ namespace Prete_Giovanni
         /// Rotates the weapon according to the mouse coordinates.
         /// </summary>
         /// <param name="mousePosition">the mouse position</param>
-        public void RotateWeapon(PointF mousePosition)
-        {
-            Weapon.UpdateRotation(mousePosition);
-        }
+        public void RotateWeapon(PointF mousePosition) => Weapon.UpdateRotation(mousePosition);
 
         public Player(ITransform transform, int height, int width, IRenderer renderer) : base(transform, height, width, renderer)
         {

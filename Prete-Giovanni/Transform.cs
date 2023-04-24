@@ -29,52 +29,35 @@ namespace Prete_Giovanni
         ///
         /// <inheritdoc/> 
         ///
-        public ITransform CopyOf()
-        {
-            return new Transform(Position, Rotation);
-        }
+        public ITransform CopyOf() => new Transform(Position, Rotation);
 
         ///
         /// <inheritdoc/> 
         ///
-        public bool IsUnderGroundLevel()
-        {
-            return Position.Y < GroundLevel;
-        }
+        public bool IsUnderGroundLevel() => Position.Y < GroundLevel;
 
         ///
         /// <inheritdoc/> 
         ///
-        public void Move(float x, float y)
-        {
-            Position += new SizeF(x, y);
-        }
+        public void Move(float x, float y) => Position += new SizeF(x, y);
 
         ///
         /// <inheritdoc/> 
         ///
         public void MoveOnGroundLevel()
         {
-            if (this.IsUnderGroundLevel())
-            {
+            if (IsUnderGroundLevel()) 
                 Position = new PointF(Position.X, GroundLevel);
-            }
         }
 
         ///
         /// <inheritdoc/> 
         ///
-        public void MoveTo(float x, float y)
-        {
-            Position = new PointF(x, y);
-        }
+        public void MoveTo(float x, float y) => Position = new PointF(x, y);
 
         ///
         /// <inheritdoc/> 
         ///
-        public void ResetGroundLevel()
-        {
-            GroundLevel = 0;
-        }
+        public void ResetGroundLevel() => GroundLevel = 0;
     }
 }

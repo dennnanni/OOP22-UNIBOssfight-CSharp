@@ -5,7 +5,7 @@ namespace Sartini_Matteo
     /// <summary>
     /// This utility class models the concept of acceleration.
     /// </summary>
-    static class Acceleration
+    public static class Acceleration
     {
 
         /// <summary>

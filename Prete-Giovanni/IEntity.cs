@@ -29,22 +29,22 @@ namespace Prete_Giovanni
     public interface IEntity
     {
         /// <summary>
-        /// Property to get the renderer.
+        /// Property to get and set the renderer.
         /// </summary>
         IRenderer Renderer { get; set; }
 
         /// <summary>
-        /// Property to get the transform.
+        /// Property to get and set the transform.
         /// </summary>
         ITransform Transform { get; set; }
 
         /// <summary>
-        /// Property to get the hitbox.
+        /// Property to get and setthe hitbox.
         /// </summary>
         IHitbox Hitbox { get; set; }
 
         /// <summary>
-        /// Property to get the health.
+        /// Property to get and set the health.
         /// </summary>
         IHealth Health { get; set; }
 

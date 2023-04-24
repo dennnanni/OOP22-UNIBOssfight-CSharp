@@ -1,5 +1,4 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System;
 using System.Drawing;
 
@@ -11,12 +10,12 @@ namespace Prete_Giovanni
     internal interface ILevel
     {
         /// <summary>
-        /// Property to get the entities.
+        /// Property to get and set the entities.
         /// </summary>
         List<IEntity> Entities { get; set; }
 
         /// <summary>
-        /// Property to get the player.
+        /// Property to get and set the player.
         /// </summary>
         Player Player { get; set; }
 

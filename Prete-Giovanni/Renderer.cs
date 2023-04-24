@@ -4,22 +4,16 @@ namespace Prete_Giovanni
 {
     public class Renderer : IRenderer
     {
-        /// <summary>
-        /// color to render
-        /// </summary>
         private Color _color;
-        /// <summary>
-        /// number of damaged framse to display
-        /// </summary>
         private int _remainingDamagedFrames;
 
         /// <summary>
-        /// Property to get the height.
+        /// Property to get and set the height.
         /// </summary>
         public int Height { get; set; }
 
         /// <summary>
-        /// Property to get the width.
+        /// Property to get and set the width.
         /// </summary>
         public int Width { get; set; }
 

@@ -9,12 +9,12 @@ namespace Prete_Giovanni
     public interface ITransform
     {
         /// <summary>
-        /// Property to get the position.
+        /// Property to get and set the position.
         /// </summary>
         PointF Position { get; set; }
 
         /// <summary>
-        /// Property to get the ground level.
+        /// Property to get and set the ground level.
         /// </summary>
         float GroundLevel { set; get; }
 

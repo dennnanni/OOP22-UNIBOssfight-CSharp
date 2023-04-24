@@ -10,28 +10,11 @@ namespace Prete_Giovanni
     /// </summary>
     internal class Level : ILevel
     {
-        /// <summary>
-        /// Standard player width anc height.
-        /// </summary>
         private const int PlayerWidth = 250;
-        /// <summary>
-        /// Standard end position.
-        /// </summary>
         private const int EndPosition = 10_000;
 
-        /// <summary>
-        /// List of entities.
-        /// </summary>
         private List<IEntity> _entities;
-
-        /// <summary>
-        /// End position
-        /// </summary>
         private int _endPosition;
-
-        /// <summary>
-        /// Number of defeated enemies
-        /// </summary>
         private int _defeatedEnemyCount;
 
         ///
